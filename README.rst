@@ -36,6 +36,12 @@ covers to provide support for easily mocking coroutines.
     :alt: Downloads
 
 
+Docs
+====
+
+Available at `django-async-test.readthedocs.org`_
+
+
 Installation
 ============
 
@@ -54,10 +60,6 @@ From github;
 
     $ pip install git+https://github.com/alexhayes/django-async-test.git
 
-Docs
-====
-
-Available at `django-async-test.readthedocs.org`_
 
 Usage
 =====
@@ -92,6 +94,7 @@ In the above example, the test is run inside a transaction by Django's TestCase,
 thus the creation of a MyModel will be rolled back, cleaning up the database.
 
 Also, our co-routine will be patched correctly by asynctest.
+
 
 License
 =======
