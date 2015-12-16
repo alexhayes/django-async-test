@@ -19,8 +19,8 @@ covers to provide support for easily mocking coroutines.
     :target: https://codecov.io/github/alexhayes/django-async-test?branch=master
     :alt: Code Coverage
 
-.. image:: https://readthedocs.org/projects/django-async-test/badge/?version=latest
-    :target: http://django-async-test.readthedocs.org/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/django-async-test/badge/
+    :target: http://django-async-test.readthedocs.org/en/latest/
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/pypi/v/django-async-test.svg
