@@ -18,9 +18,9 @@ async def create(name):
     return ModelWithBasicField.objects.create(name=name)
 
 
-class DummyTestCase(django_async_test.DjangoAsyncTestCase):
+class DummyTestCase(django_async_test.TestCase):
     """
-    A dummy test case that is used to test the behaviour of DjangoAsyncTestCase.
+    A dummy test case that is used to test the behaviour of TestCase.
     """
 
     @django_async_test.ignore_loop
