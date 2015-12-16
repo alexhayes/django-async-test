@@ -3,7 +3,7 @@
     django_async_test.testcase
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Module documentation for ``django_async_test.testcase``.
+    Internal module reference for ``django_async_test.testcase``.
 
 
 """
@@ -12,7 +12,7 @@ from asynctest import TestCase as AsyncTestCase
 from django.test import TestCase as DjangoTestCase
 
 
-class DjangoAsyncTestCase(DjangoTestCase, AsyncTestCase):
+class TestCase(DjangoTestCase, AsyncTestCase):
     """
     A testcase that wraps `django.test.TestCase`_ and `asynctest.TestCase`_.
 
@@ -30,7 +30,8 @@ class DjangoAsyncTestCase(DjangoTestCase, AsyncTestCase):
         Override setup method.
 
         Note that ``asynctest`` supports ``setUp`` as a coroutine however 
-        ``DjangoAsyncTestCase`` instead supports a ``setUpAsync`` method.
+        :py:class:`django_async_test.TestCase` instead supports a
+        ``setUpAsync`` method.
         """
         DjangoTestCase.setUp(self)
 
@@ -51,8 +52,9 @@ class DjangoAsyncTestCase(DjangoTestCase, AsyncTestCase):
         """
         Override tearDown method.
         
-        Note that ``asynctest`` supports ``tearDown`` as a coroutine however 
-        ``DjangoAsyncTestCase`` instead supports a ``tearDownAsync`` method.
+        Note that ``asynctest`` supports ``tearDown`` as a coroutine however
+        :py:class:`django_async_test.TestCase` instead supports a
+        `tearDownAsync`` method.
         """
         tearDownAsync = getattr(self, 'tearDownAsync', None)
         if tearDownAsync is not None:

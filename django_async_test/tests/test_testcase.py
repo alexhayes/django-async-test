@@ -2,7 +2,9 @@
 """
     django_async_test.tests.testcase
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Preamble...
+
+    Tests for :py:class:`django_async_test.TestCase`.
+
 """
 import unittest
 
@@ -11,7 +13,7 @@ from django.test import TestCase
 from django_async_test.tests.testapp.models import ModelWithBasicField
 
 
-class DjangoAsyncTestCaseTestCase(TestCase):
+class TestCaseTestCase(TestCase):
 
     def assertTests(self, tests):
         suite = unittest.TestSuite()
@@ -32,7 +34,7 @@ class DjangoAsyncTestCaseTestCase(TestCase):
 
     def test_transaction_support(self):
         """
-        Test transaction support of DjangoAsyncTestCase.
+        Test transaction support of :py:class:`django_async_test.TestCase`.
         """
         from django_async_test.tests.testapp.util import DummyTestCase
 
@@ -45,7 +47,7 @@ class DjangoAsyncTestCaseTestCase(TestCase):
 
     def test_coroutine(self):
         """
-        Test coroutine support of DjangoAsyncTestCase.
+        Test coroutine support of :py:class:`django_async_test.TestCase`.
         """
         from django_async_test.tests.testapp.util import DummyTestCase
 
@@ -53,7 +55,7 @@ class DjangoAsyncTestCaseTestCase(TestCase):
 
     def test_transactional_coroutine(self):
         """
-        Test transactional coroutine support of DjangoAsyncTestCase.
+        Test transactional coroutine support of :py:class:`django_async_test.TestCase`..
         """
         from django_async_test.tests.testapp.util import DummyTestCase
 

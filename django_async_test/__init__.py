@@ -20,10 +20,11 @@ __docformat__ = 'restructuredtext'
 
 # -eof meta-
 
-from .testcase import DjangoAsyncTestCase
-
 # Import all of asynctest
 from asynctest.case import *
 from asynctest.mock import *
 from asynctest.helpers import *
 from asynctest.selector import *
+
+# Now import our TestCase
+from .testcase import TestCase

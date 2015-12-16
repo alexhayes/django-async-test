@@ -68,14 +68,15 @@ Usage
 writing tests that manipulate the database in Django you'll most likely want to
 ensure that things are cleaned up after your test.
 
-Using DjangoAsyncTestCase you have the coroutine support of `asynctest` but
-with the transaction support of Django's `django.test.TestCase`_.
+With ``django_async_test.TestCase`` you have the coroutine support of
+`asynctest.TestCase`_ but with the transaction support of Django's
+`django.test.TestCase`_.
 
 .. code-block:: python
 
     import django_async_test
 
-    class MyTestCase(django_async_test.DjangoAsyncTestCase):
+    class MyTestCase(django_async_test.TestCase):
 
         @django_async_test.patch('myapp.my_coroutine')
         def test_foo(self, MockMyCoroutine):
