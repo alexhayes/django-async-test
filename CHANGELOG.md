@@ -1,3 +1,7 @@
+# Release 0.2.1 - Thu Dec 17 08:15:44 AEDT 2015
+
+- Fixed issue with setup.py entry points.
+
 # Release 0.2.0 - Thu Dec 17 08:07:10 AEDT 2015
 
 - Renamed DjangoAsyncTestCase to TestCase
