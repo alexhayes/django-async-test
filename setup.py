@@ -1,21 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-try:
-    from setuptools import setup, find_packages
-    from setuptools.command.test import test
-    is_setuptools = True
-except ImportError:
-    raise
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages           # noqa
-    from setuptools.command.test import test              # noqa
-    is_setuptools = False
-
 import os
 import sys
 import codecs
+from setuptools import setup, find_packages
 
 NAME = 'django-async-test'
 entrypoints = {}
@@ -29,12 +18,13 @@ classes = """
     Framework :: Django :: 1.8
     Framework :: Django :: 1.9
     License :: OSI Approved :: MIT License
-    Topic :: System :: Distributed Computing
-    Topic :: Software Development :: Object Brokering
+    Topic :: Software Development
+    Topic :: Software Development :: Testing
     Intended Audience :: Developers
     Programming Language :: Python
     Programming Language :: Python :: 3
     Programming Language :: Python :: 3.5
+    Programming Language :: Python :: 3 :: Only
     Programming Language :: Python :: Implementation :: CPython
     Operating System :: OS Independent
     Operating System :: POSIX
