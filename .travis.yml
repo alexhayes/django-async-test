@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.5"
+env:
+  - TOXENV=py35-django18
+  - TOXENV=py35-django19
+install:
+  - pip install tox
+  - pip install codecov
+script:
+  - tox
+after_success:
+  - codecov
