@@ -1,0 +1,15 @@
+machine:
+  python:
+    version: 3.5.0
+
+dependencies:
+  override:
+    - python setup.py install
+    - pip install tox
+    - pip install coverage
+    - pyenv local 3.5.0
+
+test:
+  override:
+    - tox -e py35-django18
+    - tox -e py35-django19
