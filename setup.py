@@ -7,7 +7,6 @@ import codecs
 from setuptools import setup, find_packages
 
 NAME = 'django-async-test'
-entrypoints = {}
 extra = {}
 
 # -*- Classifiers -*-
@@ -98,10 +97,6 @@ if os.path.exists('README.rst'):
 else:
     long_description = 'See http://pypi.python.org/pypi/django-async-test'
 
-# -*- Entry Points -*- #
-
-entrypoints['kombu.serializers'] = ['django_async_test_pickle = django_async_test.pickle:register_args']
-
 # -*- %%% -*-
 
 setup(
@@ -119,5 +114,4 @@ setup(
     tests_require=tests_require,
     test_suite='runtests',
     classifiers=classifiers,
-    entry_points=entrypoints,
     long_description=long_description)
