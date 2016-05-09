@@ -58,6 +58,10 @@ docs/_build/
 # PyBuilder
 target/
 
+# Direnv
+.direnv
+.envrc
+
 # Project Specific
 .idea
 .venv
