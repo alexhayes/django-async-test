@@ -1,3 +1,10 @@
+# Release 0.2.2 - Tuesday 10 May  07:08:57 AEST 2016
+
+- Updated asynctest to 0.7.1
+- Removed requirements readme, not relevant.
+- Added detox
+- Ignoring direnv
+
 # Release 0.2.1 - Thu Dec 17 08:15:44 AEDT 2015
 
 - Fixed issue with setup.py entry points.
