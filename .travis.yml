@@ -1,9 +1,30 @@
 language: python
 python:
   - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
 env:
   - TOXENV=py35-django18
   - TOXENV=py35-django19
+  - TOXENV=py35-django19
+  - TOXENV=py35-django20
+  - TOXENV=py35-django21
+  - TOXENV=py35-django22
+  - TOXENV=py36-django18
+  - TOXENV=py36-django19
+  - TOXENV=py36-django20
+  - TOXENV=py36-django21
+  - TOXENV=py36-django22
+  - TOXENV=py36-django30
+  - TOXENV=py37-django18
+  - TOXENV=py37-django19
+  - TOXENV=py37-django20
+  - TOXENV=py37-django21
+  - TOXENV=py37-django22
+  - TOXENV=py37-django30
+  - TOXENV=py38-django22
+  - TOXENV=py38-django30
 install:
   - pip install tox
   - pip install codecov
